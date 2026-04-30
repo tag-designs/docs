@@ -121,7 +121,7 @@ VeDBA is the magnitude of the high-pass filtered acceleration vector.  The low-p
 vector can be used to accurately compute the pitch and roll angles for an accelerometer tag.
 
 Pressure sensors have been shown to have great utility in understanding the behavior of
-birds during migration.  For example, {{< cite dhanjal-adams2018cb >}} demonstrated that by comparing pressure measurements over time it is feasible to determine which animals from a given site migrate together, {{< cite liechti2018me >}} demonstrated that one can reliably use pressure measurements to determine when animals are migrating, and {{< cite sjoberg2021sa >}} determined that small animals may fly above 5000 meters during migration.   A sub-gram pressure tag has previously been developed, but  with significantly less storage and greater energy requirements than the one presented in this paper. \cite{shipley2018mee}
+birds during migration.  For example, {{< cite dhanjal-adams2018cb >}} demonstrated that by comparing pressure measurements over time it is feasible to determine which animals from a given site migrate together, {{< cite liechti2018me >}} demonstrated that one can reliably use pressure measurements to determine when animals are migrating, and {{< cite sjoberg2021sa >}} determined that small animals may fly above 5000 meters during migration.   A sub-gram pressure tag has previously been developed, but  with significantly less storage and greater energy requirements than the one presented in this paper. {{< cite shipley2018mee >}}
 
 Finally, light-level geolocation is one of the fundamental  techniques used to determine the paths taken during migration.{{< cite hill2001etatimfrmatifbafv1 >}}, {{< cite fudickar2012mee >}}
 While commercial light-level geolocation tags are available, geolocation in combination with acceleration or altitude data seems  especially useful.
@@ -258,4 +258,4 @@ In developing prototypes we have primarily used two suppliers -- Macrofab and PC
 
 ## References 
 
-{{< bibliography cited >}}
+{{< references >}}

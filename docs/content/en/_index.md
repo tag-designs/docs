@@ -63,9 +63,7 @@ biology partners study the behavior and ecology of
 dark-eyed juncos ($20-25g$), pine siskins ($12-18g$), great tits ($16-21g$), and robins. 
 {{< cite "cornelllabofornithology2019aab" >}}
 
-{{< bibliography cited >}}
-
-
+{{< references >}}
 
 
 

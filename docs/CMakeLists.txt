@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(image-testfile)
+project(tag-designs-docs-site LANGUAGES NONE)
 
 # find the files
 
@@ -39,11 +39,36 @@ foreach(f ${SRC_FILES})
   add_dependencies(images-svg "${fname}-tikz")
 endforeach()
 
-add_custom_target(docs 
-COMMAND hugo -d "${CMAKE_CURRENT_BINARY_DIR}/public/" -s "${CMAKE_CURRENT_SOURCE_DIR}" -b "https://pages.github.com/geoffreymbrown/ab-tag/"
-)
+set(HUGO_BASEURL "/" CACHE STRING "Base URL passed to Hugo when building the docs target")
 
-add_custom_command(TARGET docs POST_BUILD COMMAND rsync -rcv --delete --exclude=.git "${CMAKE_CURRENT_BINARY_DIR}/public/" "${CMAKE_BINARY_DIR}/../ab-paper-gh-pages")
+if(WIN32)
+  set(HUGO_PATH "${CMAKE_CURRENT_SOURCE_DIR}/node_modules/.bin;$ENV{PATH}")
+else()
+  set(HUGO_PATH "${CMAKE_CURRENT_SOURCE_DIR}/node_modules/.bin:$ENV{PATH}")
+endif()
+set(POSTCSS_BIN_DIR "${CMAKE_CURRENT_SOURCE_DIR}/node_modules/.bin")
 
+add_custom_target(docs
+  COMMAND "${CMAKE_COMMAND}" -E env "PATH=${HUGO_PATH}"
+          "${CMAKE_COMMAND}" -DPOSTCSS_BIN_DIR="${POSTCSS_BIN_DIR}"
+          -P "${CMAKE_CURRENT_SOURCE_DIR}/cmake/CheckPostCSS.cmake"
+  COMMAND "${CMAKE_COMMAND}" -E env "PATH=${HUGO_PATH}"
+          hugo -d "${CMAKE_CURRENT_BINARY_DIR}/public/"
+               -s "${CMAKE_CURRENT_SOURCE_DIR}"
+               -b "${HUGO_BASEURL}"
+  WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
 
+find_program(RSYNC_EXECUTABLE rsync)
+set(GH_PAGES_DIR "${CMAKE_BINARY_DIR}/../ab-paper-gh-pages" CACHE PATH
+    "Local GitHub Pages checkout used by the sync-gh-pages target")
 
+if(RSYNC_EXECUTABLE)
+  add_custom_target(
+    sync-gh-pages
+    COMMAND "${RSYNC_EXECUTABLE}" -rcv --delete --exclude=.git
+            "${CMAKE_CURRENT_BINARY_DIR}/public/"
+            "${GH_PAGES_DIR}"
+    DEPENDS docs)
+else()
+  message(STATUS "rsync not found; sync-gh-pages target will not be available")
+endif()

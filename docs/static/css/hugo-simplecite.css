@@ -1,0 +1,22 @@
+.hugo-simplecite-reference-list {
+  list-style: none;
+  counter-reset: hugo-simplecite-reference;
+  padding-left: 0;
+}
+
+.hugo-simplecite-reference-list > li {
+  counter-increment: hugo-simplecite-reference;
+  padding-left: 2.5rem;
+  text-indent: -2.5rem;
+}
+
+.hugo-simplecite-reference-list > li::before {
+  content: "[" counter(hugo-simplecite-reference) "]  ";
+}
+
+.hugo-simplecite-doi-hyperlink,
+.hugo-simplecite-url-hyperlink {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}

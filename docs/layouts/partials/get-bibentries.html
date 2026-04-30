@@ -1,0 +1,58 @@
+{{- $context := . -}}
+{{- $bibfileBaseName := "bib.json" -}}
+{{- $bibentries := slice -}}
+
+{{- with .Page.Params.bibFile -}}
+  {{- $bibfile := . -}}
+  {{- if fileExists $bibfile -}}
+    {{- $bibentries = readFile $bibfile | transform.Unmarshal -}}
+  {{- else -}}
+    {{- errorf "%q uses bibFile %q, but that file was not found" $context.Page.File.Path $bibfile -}}
+  {{- end -}}
+{{- else -}}
+  {{- with .Page.Resources.Get $bibfileBaseName -}}
+    {{- $bibentries = . | transform.Unmarshal -}}
+  {{- else -}}
+    {{- with .Page.Parent -}}
+      {{- with .Resources.Get $bibfileBaseName -}}
+        {{- $bibentries = . | transform.Unmarshal -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if not $bibentries -}}
+  {{- errorf "%q did not find a bibliography. Set bibFile or add bib.json to the page/branch bundle." .Page.File.Path -}}
+{{- end -}}
+
+{{- $sorting := .Page.Params.bibliography_sort -}}
+{{- $bibliography := $bibentries -}}
+
+{{- if or (not $sorting) (eq $sorting "date_descending") -}}
+  {{- $taggedEntries := slice -}}
+  {{- range $bibentry := $bibentries -}}
+    {{- $year := 0 -}}
+    {{- with index $bibentry "issued" -}}
+      {{- with index . "date-parts" -}}
+        {{- with index . 0 -}}
+          {{- with index . 0 -}}
+            {{- $year = . -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $taggedEntries = $taggedEntries | append (dict "year" $year "entry" $bibentry) -}}
+  {{- end -}}
+
+  {{- $sortedEntries := slice -}}
+  {{- range sort $taggedEntries "year" "desc" -}}
+    {{- $sortedEntries = $sortedEntries | append .entry -}}
+  {{- end -}}
+  {{- $bibliography = $sortedEntries -}}
+{{- else if eq $sorting "json_order" -}}
+  {{- $bibliography = $bibentries -}}
+{{- else -}}
+  {{- errorf "Unknown bibliography sorting %q. Use date_descending or json_order." $sorting -}}
+{{- end -}}
+
+{{- return $bibliography -}}

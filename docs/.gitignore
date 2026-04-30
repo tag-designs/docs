@@ -25,5 +25,6 @@ tex-images/*.pdf
 static/generated/*
 public
 *-old
+node_modules
 npm_modules
 resources/_gen

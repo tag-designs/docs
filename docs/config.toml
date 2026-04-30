@@ -2,12 +2,18 @@ baseURL = "/"
 title = "Sub-gram Tags"
 
 enableRobotsTXT = true
-canonifyURLS = true
-relativeURLS = true
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
 
-theme = ["docsy", "hugo-cite"]
+[module]
+  proxy = "direct"
+  [module.hugoVersion]
+    extended = true
+    min = "0.146.0"
+  [[module.imports]]
+    path = "github.com/google/docsy"
+  [[module.imports]]
+    path = "github.com/joksas/hugo-simplecite"
 
 # Will give values to .Lastmod etc.
 
@@ -22,7 +28,7 @@ defaultContentLanguageInSubdir = false
 # Useful when translating.
 
 enableMissingTranslationPlaceholders = false
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy"]
 
 # Highlighting config
 
@@ -72,10 +78,11 @@ anchor = "smart"
 [languages]
 [languages.en]
 title = "Sub-gram Tags"
-description = "Ultralight data loggers for songbirds"
-languageName ="English"
+label = "English"
 # Weight used for sorting.
 weight = 1
+[languages.en.params]
+description = "Ultralight data loggers for songbirds"
 
 [markup]
   [markup.goldmark]
@@ -148,9 +155,6 @@ github_project_repo = "https://github.com/google/docsy"
 # Google Custom Search Engine ID. Remove or comment out to disable search.
 #gcs_engine_id = "d72aa9b2712488cc3"
 
-# Enable Algolia DocSearch
-algolia_docsearch = false
-
 # Enable Lunr.js offline search
 offlineSearch = true
 
@@ -167,8 +171,8 @@ breadcrumb_disable = true
 sidebar_search_disable = true
 #  Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top nav bar
 navbar_logo = true
-# Set to true to disable the About link in the site footer
-footer_about_disable = true
+# Set to true to show the About link in the site footer
+footer_about_enable = false
 
 # Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
 # This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
@@ -224,4 +228,3 @@ enable = true
     weight = 50
     url = "https://github.iu.edu/geobrown/Nanotag-paper"
     pre = "<i class='fab fa-github'></i>"
-
