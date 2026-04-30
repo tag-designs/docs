@@ -27,7 +27,7 @@ the tag firmware.
 
 ## Tag
 
-{{< figure src="/docs/architecture/images/lifecycle.svg#center" title="Tag Lifecycle" >}}
+{{< figure src="../images/lifecycle.svg#center" title="Tag Lifecycle" >}}
 
 Consider the life cycle of a tag.
 which corresponds directly to the runtime state machine.
@@ -196,7 +196,7 @@ int main(int argc, char **argv)
 
 Recall our basic system model consisting of a tag and an associated base..
 
-{{< figure src="/docs/architecture/images/genericsystem.svg#center" width=600px >}}
+{{< figure src="../images/genericsystem.svg#center" width=600px >}}
 
 For communication between the base and a tag, we utilize a standard serial interface present in all ARM based processors --
 the SWD (serial wire debug) protocol for communication.  By utilizing this interface, our architecture

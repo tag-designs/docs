@@ -7,7 +7,7 @@ bookCollapseSection: false
 type: docs
 ---
 
-{{< figure src="/docs/architecture/images/tag-simple.svg# center" title="Generic Tag Architecture" >}} 
+{{< figure src="../images/tag-simple.svg# center" title="Generic Tag Architecture" >}} 
 
 A high level view of the major components of a generic tag is illustrated above
 with optional sub-components indicated by dashed boxes.  Every tag has an interface, a battery, a real-time clock (RTC), and a processor.  In our tags we use the STM32L43x family of processors, which have extremely low-power "sleep" states, and one of several RTC chips -- the RV-3028, RV-8803, and RV-3032.  These RTC chips have exceptionally 
@@ -31,7 +31,7 @@ The major components of a BitTag are the processor (STM32l432), RTC (RV-3028), a
 
 <--->
 
-{{< figure src="/docs/architecture/images/bittag-annotated.png#center" title="Two sides of BitTag" >}}
+{{< figure src="../images/bittag-annotated.png#center" title="Two sides of BitTag" >}}
 {{< /columns>}}
 
 
@@ -47,5 +47,5 @@ We program and communicate with our tags through the bases using existing open-s
 
 <--->
 
-{{< figure src="/docs/architecture/images/tagbase2.png#center" title="Tag Base">}}
+{{< figure src="../images/tagbase2.png#center" title="Tag Base">}}
 {{< /columns >}}

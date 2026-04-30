@@ -25,7 +25,7 @@ The formula, based upon published data from a variety of species should provide 
 <--->
 
 <figure align="center">
-<img src="/docs/userguides/legharness/images/naef-daenzer.png" alt="Loop Harness" width=60%>
+<img src="images/naef-daenzer.png" alt="Loop Harness" width=60%>
 <figcaption align="center">Loop Harness: Naef-Daenzer 2007</figcaption>
 </figure>
 
@@ -53,7 +53,7 @@ The formula, based upon published data from a variety of species should provide 
 <--->
 
 <figure align=center>
-<img src="/docs/userguides/legharness/images/materials.png" alt="Harness Materials" width=70%>
+<img src="images/materials.png" alt="Harness Materials" width=70%>
 <figcaption align=center>Fig. 1 Loop Harness Materials</figcaption>
 </figure>
 
@@ -72,7 +72,7 @@ The formula, based upon published data from a variety of species should provide 
 
 
 <figure align=center>
-<img src="/docs/userguides/legharness/images/step2.png" alt="Start Building" width=70%>
+<img src="images/step2.png" alt="Start Building" width=70%>
 <figcaption align=center>Fig. 2  Start Building</figcaption>
 </figure>
 
@@ -89,7 +89,7 @@ The formula, based upon published data from a variety of species should provide 
 <--->
 
 <figure align=center>
-<img src="/docs/userguides/legharness/images/safetyknot.png" alt="Safety Knot" width=70%>
+<img src="images/safetyknot.png" alt="Safety Knot" width=70%>
 <figcaption align=center>Fig. 3 Safety Knot </figcaption>
 </figure>
 
@@ -107,7 +107,7 @@ Put the string through the rest of the holes so that two loops can be made.
 
 
 <figure align=center>
-<img src="/docs/userguides/legharness/images/finishloops.png" alt="Finish Loops" width=70%>
+<img src="images/finishloops.png" alt="Finish Loops" width=70%>
 <figcaption align=center>Fig. 4  Finish Threading Loops </figcaption>
 </figure>
 
@@ -126,7 +126,7 @@ Put the string through the rest of the holes so that two loops can be made.
 <--->
 
 <figure align=center>
-<img src="/docs/userguides/legharness/images/measureharness.png" alt="Measure Harness" width=70%>
+<img src="images/measureharness.png" alt="Measure Harness" width=70%>
 <figcaption align=center>Fig. 5 Measuring the Harness </figcaption>
 </figure>
 
@@ -142,7 +142,7 @@ Put the string through the rest of the holes so that two loops can be made.
 <--->
 
 <figure align=center>
-<img src="/docs/userguides/legharness/images/marking.png" alt="Marking the Harness" width=70%>
+<img src="images/marking.png" alt="Marking the Harness" width=70%>
 <figcaption align=center>Fig. 6 Marking the Harness</figcaption>
 </figure>
 
@@ -161,7 +161,7 @@ Put the string through the rest of the holes so that two loops can be made.
 
 
 <figure align=center>
-<img src="/docs/userguides/legharness/images/tyingoff.png" alt="Tying the Harness" width=70%>
+<img src="images/tyingoff.png" alt="Tying the Harness" width=70%>
 <figcaption align=center>Fig. 7 Tying the Harness</figcaption>
 </figure>
 {{< /columns >}}
@@ -178,7 +178,7 @@ Put the string through the rest of the holes so that two loops can be made.
 <--->
 
 <figure align=center>
-<img src="/docs/userguides/legharness/images/gluingknots.png" alt="Sealing the Knots" width=70%>
+<img src="images/gluingknots.png" alt="Sealing the Knots" width=70%>
 <figcaption align=center>Fig. 8 Sealing the Knots</figcaption>
 </figure>
 
@@ -194,7 +194,7 @@ Put the string through the rest of the holes so that two loops can be made.
 <--->
 
 <figure align=center>
-<img src="/docs/userguides/legharness/images/admire.png" alt="Admire Your Work" width=70%>
+<img src="images/admire.png" alt="Admire Your Work" width=70%>
 <figcaption align=center>Fig. 9 Admire Your Work</figcaption>
 </figure>
 

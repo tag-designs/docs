@@ -50,7 +50,7 @@ temperature.  The former is useful for evaluating the battery discharge rate in 
 <--->
 
 
-{{< figure src="/docs/bittag/images/robin-migration.png#center" title="Robin Migration" width=500px >}}  
+{{< figure src="images/robin-migration.png#center" title="Robin Migration" width=500px >}}  
 
 {{< /columns >}}
 
@@ -65,7 +65,7 @@ UTC time.   Another feature, not displayed here, is the ability to overlay the s
 a simulation model for indoor studies.
 
 <--->
-{{< figure src="/docs/architecture/images/actogram.png#center" title="BitTag Actogram" width=500px >}}  
+{{< figure src="../architecture/images/actogram.png#center" title="BitTag Actogram" width=500px >}}  
 {{< /columns >}}
 
 
@@ -106,11 +106,11 @@ be built relatively inexpensively (under $50/each in small quantities).
 {{< /class >}}
 {{< class "pure-u-1-4 pa3" >}}
 
-{{< figure src="/docs/architecture/images/IMG_7529.jpg#center" title="Programmer for BitTags" width=300px >}}
+{{< figure src="../architecture/images/IMG_7529.jpg#center" title="Programmer for BitTags" width=300px >}}
 
-{{< figure src="/docs/architecture/images/plasticbasehardware.jpg#center" title="Tagbase Adapter and Tools" width=300px >}}
+{{< figure src="../architecture/images/plasticbasehardware.jpg#center" title="Tagbase Adapter and Tools" width=300px >}}
 
-{{< figure src="/docs/architecture/images/IMG_7523.jpg#center" title="Tag Charger Array" width=300px >}}
+{{< figure src="../architecture/images/IMG_7523.jpg#center" title="Tag Charger Array" width=300px >}}
 
 
 {{< /class >}}
@@ -134,7 +134,7 @@ This tab also provides various control actions and provides for data download.
 
 <--->
 
-{{< figure src="/docs/architecture/images/tagmonitor.png#center" title="NanoLogger Monitor" width=500px >}}
+{{< figure src="../architecture/images/tagmonitor.png#center" title="NanoLogger Monitor" width=500px >}}
 
 {{< /columns >}}
 
@@ -145,7 +145,7 @@ As mentioned, the tags provide the ability to create complex schedules including
 
 <--->
 
-{{< figure src="/docs/architecture/images/schedule.png#center" title="NanoLogger Monitor" width=500px >}}
+{{< figure src="../architecture/images/schedule.png#center" title="NanoLogger Monitor" width=500px >}}
 
 {{< /columns >}}
 
@@ -157,14 +157,13 @@ The Tag Monitor provides access to these configuration options.
 
 <--->
 
-{{< figure src="/docs/architecture/images/sensors.png#center" title="NanoLogger Monitor" width=500px >}}
+{{< figure src="../architecture/images/sensors.png#center" title="NanoLogger Monitor" width=500px >}}
 
 {{< /columns >}}
 
 
 The Tag Monitor software is highly configurable and is designed so that it can be extended to support additional types of sensors and 
 data storage strategies.  The specific options shown are automatically customized to the tag being configured.   In addition, we provide support for batch testing and configuration of tags through separate command-line tools.
-
 
 
 

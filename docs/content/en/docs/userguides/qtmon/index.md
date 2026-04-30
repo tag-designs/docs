@@ -22,7 +22,7 @@ the current tag status, and various controls.
 <--->
 
 <figure align="center">
-<img src="/docs/userguides/qtmon/images/qtmonitor.png" alt="NanoTag Monitor">
+<img src="images/qtmonitor.png" alt="NanoTag Monitor">
 <figcaption align="center">Fig. 1  NanoTag Monitor</figcaption>
 </figure>
 
@@ -41,7 +41,7 @@ tag clock can be synchronized to the host computer (Sync button).
 
 
 <figure align="center">
-<img src="/docs/userguides/qtmon/images/status.png" alt="NanoTag Status">
+<img src="images/status.png" alt="NanoTag Status">
 <figcaption align="center">Fig. 2  NanoTag Monitor (Status) </figcaption>
 </figure>
 
@@ -68,7 +68,7 @@ Tag Information includes the following
 
 
 <figure align="center">
-<img src="/docs/userguides/qtmon/images/tag-info.png" alt="NanoTag Information">
+<img src="images/tag-info.png" alt="NanoTag Information">
 <figcaption align="center">Fig. 3  NanoTag Monitor (Information) </figcaption>
 </figure>
 
@@ -89,7 +89,7 @@ removing a tag.
 
 
 <figure align="center">
-<img src="/docs/userguides/qtmon/images/control.png" alt="NanoTag Control">
+<img src="images/control.png" alt="NanoTag Control">
 <figcaption align="center">Fig. 4  NanoTag Monitor (Control) </figcaption>
 </figure>
 
@@ -105,7 +105,7 @@ The final control area of the Tag State tab is the Data area.  A tag that has ex
 
 
 <figure align="center">
-<img src="/docs/userguides/qtmon/images/data-save.png" alt="NanoTag Data">
+<img src="images/data-save.png" alt="NanoTag Data">
 <figcaption align="center">Fig. 5  NanoTag Monitor (Data Save) </figcaption>
 </figure>
 
@@ -129,7 +129,7 @@ Schedule times are limited to hour level precision.
 <--->
 
 <figure align="center">
-<img src="/docs/userguides/qtmon/images/configure.png" alt="NanoTag Configuration">
+<img src="images/configure.png" alt="NanoTag Configuration">
 <figcaption align="center">Fig. 6  NanoTag Monitor Configuration </figcaption>
 </figure>
 
@@ -145,7 +145,7 @@ The current tag configuration can be read.  Finally,
 the configuration can be written to the tag -- and consequently data collection begun -- with the **start** button.
 
 <figure align="center">
-<img src="/docs/userguides/qtmon/images/startbutton.png" alt="NanoTag Configuration Controls", width=60%>
+<img src="images/startbutton.png" alt="NanoTag Configuration Controls", width=60%>
 <figcaption align="center">Fig. 7  NanoTag Monitor Configuration Controls </figcaption>
 </figure>
 
@@ -167,7 +167,7 @@ counts/minute, counts/four minutes, and counts/five minute.  The primary determi
 <--->
 
 <figure align="center">
-<img src="/docs/userguides/qtmon/images/dataconfig.png" alt="NanoTag Data Configuration">
+<img src="images/dataconfig.png" alt="NanoTag Data Configuration">
 <figcaption align="center">Fig. 8  NanoTag Data Logging Configuration </figcaption>
 </figure>
 
@@ -189,7 +189,7 @@ must stay below the inactive threshold to return to the inactive state (inactivi
 <--->
 
 <figure align="center">
-<img src="/docs/userguides/qtmon/images/adxlconfig.png" alt="NanoTag Sensor Configuration">
+<img src="images/adxlconfig.png" alt="NanoTag Sensor Configuration">
 <figcaption align="center">Fig. 9  NanoTag Sensor Configuration </figcaption>
 </figure>
 
@@ -207,7 +207,7 @@ The primary function of the Error Log tag is to provide debugging information.  
 <--->
 
 <figure align="center">
-<img src="/docs/userguides/qtmon/images/error-log.png" alt="NanoTag Error Log">
+<img src="images/error-log.png" alt="NanoTag Error Log">
 <figcaption align="center">Fig. 10  NanoTag Error Log </figcaption>
 </figure>
 
@@ -257,5 +257,4 @@ an on-line tool such as [Epoch Converter](https://www.epochconverter.com).
 }
 ```
 {{< /columns >}}
-
 
