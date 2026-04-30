@@ -189,7 +189,7 @@ setup is to publish with GitHub Actions.
 1. Push this repository to GitHub.
 2. In the repository settings, go to **Pages**.
 3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-4. Add a workflow at `.github/workflows/pages.yml`.
+4. Use the workflow in `.github/workflows/pages.yml`.
 
 Example workflow:
 
@@ -203,8 +203,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -215,7 +213,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GO_VERSION: "1.22"
-      HUGO_VERSION: "0.160.1"
+      HUGO_VERSION: "0.161.1"
       NODE_VERSION: "22"
       HUGO_CACHEDIR: "${{ runner.temp }}/hugo_cache"
     steps:
@@ -256,13 +254,16 @@ jobs:
         run: npm run build -- --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: docs/public
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: "${{ steps.deployment.outputs.page_url }}"
