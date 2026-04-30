@@ -215,7 +215,6 @@ jobs:
       GO_VERSION: "1.22"
       HUGO_VERSION: "0.161.1"
       NODE_VERSION: "22"
-      HUGO_CACHEDIR: "${{ runner.temp }}/hugo_cache"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -251,6 +250,8 @@ jobs:
 
       - name: Build
         working-directory: docs
+        env:
+          HUGO_CACHEDIR: "${{ runner.temp }}/hugo_cache"
         run: npm run build -- --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload Pages artifact
